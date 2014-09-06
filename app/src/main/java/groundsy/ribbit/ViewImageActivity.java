@@ -9,9 +9,14 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import groundsy.ribbit.R;
 
 public class ViewImageActivity extends Activity {
+
+    protected final int TIMER_DELAY = 10*1000;  // 10 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,14 @@ public class ViewImageActivity extends Activity {
         Uri imageUri = getIntent().getData();
 
         Picasso.with(this).load(imageUri.toString()).into(imageView);
+
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, TIMER_DELAY);
     }
 
     @Override
