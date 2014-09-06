@@ -36,7 +36,6 @@
     <string name="success_sending_message">Message Sent!</string>
     <string name="error_sending_message">There was an error sending the message.  Please try again.</string>
 
-
     <string-array name="camera_choices">
         <item>Take Picture</item>
         <item>Take Video</item>
@@ -45,5 +44,6 @@
     </string-array>
 
     <string name="title_activity_recipients">Choose Recipients</string>
+    <string name="title_activity_view_image">Ribbit</string>
 
 </resources>
