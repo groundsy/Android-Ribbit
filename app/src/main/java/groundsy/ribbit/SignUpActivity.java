@@ -30,10 +30,10 @@ public class SignUpActivity extends Activity {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_sign_up);
 
-        mEmail = (EditText)findViewById(R.id.emailTxt);
-        mUsername = (EditText)findViewById(R.id.usernameTxt);
-        mPassword = (EditText)findViewById(R.id.passwordTxt);
-        mSignUpButton = (Button)findViewById(R.id.signUpBtn);
+        mEmail = (EditText)findViewById(R.id.emailField);
+        mUsername = (EditText)findViewById(R.id.usernameField);
+        mPassword = (EditText)findViewById(R.id.passwordField);
+        mSignUpButton = (Button)findViewById(R.id.signupButton);
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +44,8 @@ public class SignUpActivity extends Activity {
                 if (email.isEmpty() || username.isEmpty() || password.isEmpty()) {
                     // Alert user that all fields are required
                     AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
-                    builder.setTitle(R.string.sign_up_error_title)
-                           .setMessage(R.string.sign_up_error_message)
+                    builder.setTitle(R.string.signup_error_title)
+                           .setMessage(R.string.signup_error_message)
                            .setPositiveButton(android.R.string.ok, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
@@ -67,7 +67,7 @@ public class SignUpActivity extends Activity {
                                 startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
-                                builder.setTitle(R.string.sign_up_error_title)
+                                builder.setTitle(R.string.signup_error_title)
                                         .setMessage(e.getMessage())
                                         .setPositiveButton(android.R.string.ok, null);
                                 AlertDialog dialog = builder.create();
@@ -86,9 +86,7 @@ public class SignUpActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
     }
 }

@@ -184,7 +184,7 @@ public class RecipientsActivity extends ListActivity {
             public void done(ParseException e) {
                 if (e == null) {
                     // Success
-                    Toast.makeText(RecipientsActivity.this, R.string.success_sending_message, Toast.LENGTH_LONG).show();
+                    Toast.makeText(RecipientsActivity.this, R.string.success_message, Toast.LENGTH_LONG).show();
                 } else {
                     // Error
                     AlertDialog.Builder builder = new AlertDialog.Builder(RecipientsActivity.this);

@@ -94,7 +94,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 case 3: // Choose video
                     Intent chooseVideoIntent = new Intent(Intent.ACTION_GET_CONTENT);
                     chooseVideoIntent.setType("video/*");
-                    Toast.makeText(MainActivity.this, getString(R.string.video_file_length_warning), Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.video_file_size_warning), Toast.LENGTH_LONG).show();
                     startActivityForResult(chooseVideoIntent, PICK_VIDEO_REQUEST);
                     break;
             }
@@ -246,7 +246,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                         }
                     }
                     if (fileSize >= FILE_SIZE_LIMIT) {
-                        Toast.makeText(this, getString(R.string.video_file_size_too_large), Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, getString(R.string.video_size_limit_warning), Toast.LENGTH_LONG).show();
                         return;
                     }
                 }
@@ -300,8 +300,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         int id = item.getItemId();
 
         switch(id) {
-            case R.id.action_settings:
-                return true;
             case R.id.action_logout:
                 ParseUser.logOut();
                 navigateToLogin();

@@ -1,5 +1,6 @@
 package groundsy.ribbit;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -33,9 +34,12 @@ public class LoginActivity extends Activity {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_login);
 
-        mUsername = (EditText)findViewById(R.id.usernameTxt);
-        mPassword = (EditText)findViewById(R.id.passwordTxt);
-        mLoginButton = (Button)findViewById(R.id.loginBtn);
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
+        mUsername = (EditText)findViewById(R.id.usernameField);
+        mPassword = (EditText)findViewById(R.id.passwordField);
+        mLoginButton = (Button)findViewById(R.id.loginButton);
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +84,7 @@ public class LoginActivity extends Activity {
         });
 
 
-        mSignUpTextView = (TextView) findViewById(R.id.signUpTxt);
+        mSignUpTextView = (TextView) findViewById(R.id.signUpText);
         mSignUpTextView.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
@@ -97,9 +101,7 @@ public class LoginActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
     }
 }
