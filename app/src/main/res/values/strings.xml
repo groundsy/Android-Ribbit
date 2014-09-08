@@ -13,7 +13,8 @@
     <string name="sign_up_text">Don\'t have an account? Sign up!</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="email_hint">Email</string>
-    <string name="sign_up_button_label">Sign Up</string>
+    <string name="sign_up_button_label">SIGN UP</string>
+    <string name="cancel_button_label">CANCEL</string>
     <string name="signup_error_message">Please make sure you enter a username, password, and email address!</string>
     <string name="signup_error_title">Oops!</string>
     <string name="login_error_message">Please make sure you enter a username and password!</string>
@@ -30,6 +31,7 @@
     <string name="video_size_limit_warning">The selected video must be less than 10 MB.</string>
     <string name="error_selecting_file">There was an error with the file selected. Please select a different file.</string>
     <string name="error_file_too_large">The selected file is too large! Select a new file.</string>
+    <string name="content_desc_button_divider">Button divider</string>
 
     <string-array name="camera_choices">
         <item>Take Picture</item>
