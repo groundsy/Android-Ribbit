@@ -33,6 +33,7 @@
     <string name="error_file_too_large">The selected file is too large! Select a new file.</string>
     <string name="content_desc_button_divider">Button divider</string>
     <string name="content_desc_user_avatar">User avatar</string>
+    <string name="content_desc_user_checkmark">User checkmark</string>
 
     <string-array name="camera_choices">
         <item>Take Picture</item>
