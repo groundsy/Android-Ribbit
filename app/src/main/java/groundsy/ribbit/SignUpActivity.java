@@ -71,6 +71,7 @@ public class SignUpActivity extends Activity {
                         public void done(ParseException e) {
                             setProgressBarIndeterminateVisibility(false);
                             if (e == null) {
+                                RibbitApplication.updateParseInstallation(ParseUser.getCurrentUser());
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
